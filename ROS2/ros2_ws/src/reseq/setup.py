@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'logger = reseq.logger:main',
+            'temperature_logger = reseq.temperature_logger:main',
             'temperature_sensor = reseq.temperature_sensor:main',
         ],
     },
