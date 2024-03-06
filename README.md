@@ -18,6 +18,6 @@ To submit your answers, follow these steps:
 4. Open a pull request against the `main` branch of your own fork.
 5. Paste the link to this pull request in the text box provided.
 
-For a step-by-step guide, refer to this [video](https://youtu.be/o0u0xmiMMaY).
-
 **Note:** Do not open a pull request against [our repository](https://github.com/Team-Isaac-Polito/software_recruitment) to avoid disclosing your solution to other candidates.
+![PR](PR.png)
+

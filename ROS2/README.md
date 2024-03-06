@@ -16,7 +16,7 @@ If you're unfamiliar with ROS2, you can learn more about it from the following l
 5. [Creating a package](https://docs.ros.org/en/iron/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html)
 6. [Writing a simple publisher and subscriber (Python)](https://docs.ros.org/en/iron/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
 
-While other setups are possible, we highly recommend installing ROS2 on Ubuntu Jammy (22.04). If Ubuntu Jammy isn't your main operating system, you can install it on a virtual machine or any other environment you're comfortable with.
+While other setups are possible, we highly recommend installing ROS2 on Ubuntu Jammy (22.04). If Ubuntu Jammy isn't your main operating system, you can install it on WSL, a virtual machine or any other environment you're comfortable with.
 
 ROS2 comes in various distributions, known as [distributions](https://docs.ros.org/en/iron/Releases.html). Currently, our robot runs on the [Humble distribution](https://docs.ros.org/en/iron/Releases/Release-Humble-Hawksbill.html), but you can also use [Iron](https://docs.ros.org/en/iron/Releases/Release-Iron-Irwini.html) as they are mostly the same for the scope of this challenge. All links provided in this document refer to `Iron`, but you can easily select another version from the menu in the bottom-left corner of the documentation.
 
@@ -34,7 +34,7 @@ Your first task is to implement the `TemperatureLogger` node by completing the `
 classDiagram
 class TemperatureLogger {
     + __init__(filename: str)
-	+ callback(temperature: Float32)
+    + callback(temperature: Float32)
 }
 ```
 
