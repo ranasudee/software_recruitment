@@ -84,10 +84,10 @@ uint16_t analogRead(uint8_t pin) {
 void analogReference(uint8_t mode) {}
 
 uint8_t lowByte(uint16_t w) {
-    return (uint8_t) w & 0xff;
+    return (uint8_t) (w & 0xff);
 }
 uint8_t highByte(uint16_t w) {
-    return (uint8_t) w >> 8;
+    return (uint8_t) (w >> 8);
 }
 
 void FakeSerial::begin(uint64_t baudrate) {
