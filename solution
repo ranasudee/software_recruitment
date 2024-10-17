@@ -1,0 +1,29 @@
+#include <Servo.h>
+
+const int joystickPin = A2; // Joystick connected to pin A2
+const int baudRate = 19200; // Baud rate for serial communication
+const int updateInterval = 100; // Time interval in ms to read joystick
+
+void sendMotorPosition(int position) {
+    byte instruction = 0x1E;  
+    byte posLowByte = position & 0xFF;   
+    byte posHighByte = (position >> 8) & 0xFF;
+
+    Serial.write(instruction); 
+    Serial.write(posLowByte);  
+    Serial.write(posHighByte); 
+}
+
+void setup() {
+    Serial.begin(baudRate); 
+}
+
+void loop() {
+    int joystickValue = analogRead(joystickPin);
+    
+    int motorPosition = map(joystickValue, 0, 1023, 0x000, 0x3FF);
+
+    sendMotorPosition(motorPosition);
+
+    delay(updateInterval);
+}
